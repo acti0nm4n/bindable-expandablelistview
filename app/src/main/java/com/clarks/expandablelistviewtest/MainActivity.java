@@ -45,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.btn_test)
     public void onClick() {
 
-        list.get(1).setName("Updated!");
-        list.get(1).bits.get(1).setTitle("Updated title!");
+        list.get(0).setName("Entity Updated " + (Math.random()*1000));
+        list.get(0).bits.get(1).setTitle("Bit Updated " + (Math.random()*1000));
+
+        list.get(1).setName("Entity Updated " + (Math.random()*1000));
 
         adapter.notifyDataSetChanged();
     }
